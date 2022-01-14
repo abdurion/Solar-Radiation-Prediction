@@ -5,7 +5,8 @@ This project explores solar irradiance data collected from the NASA earth observ
 [Raw Dataset](https://drive.google.com/file/d/1-I9EuifioMKqO2e1PSMOPKPKxqg8LZGR/view?usp=sharing) <br>
 ['Dashboard-Ready' Dataset](https://drive.google.com/file/d/11gnCoO1SOZAadrHr01RIIwkrcHgvZWSv/view?usp=sharing)
 <br>
-2B||!2B\
+<br><br>
+2B||!2B <br>
 -Team Members-
 [Abdulrahman Alqumaidy](https://github.com/abdurion) <br>
 [Hawra Alhulail](https://github.com/Hawra31) <br>
