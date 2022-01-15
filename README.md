@@ -11,7 +11,6 @@ This project explores solar irradiance data collected from the NASA earth observ
 [Abdulrahman Alqumaidy](https://github.com/abdurion) <br>
 [Hawra Alhulail](https://github.com/Hawra31) <br>
 [Nawaf Althobaiti](https://github.com/Nawaf-Althobaiti) <br>
-[Rahaf Alhazmi](https://github.com/Rahaf-alhazmi)
- <br>
+[Rahaf Alhazmi](https://github.com/Rahaf-alhazmi) <br>
 [Fatimah Aldajani](https://github.com/FamAldajani) <br>
  
