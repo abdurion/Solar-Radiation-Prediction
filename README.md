@@ -7,7 +7,7 @@ This project explores solar irradiance data collected from the NASA earth observ
 <br>
 <br><br>
 2B||!2B <br>
--Team Members- <br>
+- Team Members - <br>
 [Abdulrahman Alqumaidy](https://github.com/abdurion) <br>
 [Hawra Alhulail](https://github.com/Hawra31) <br>
 [Nawaf Althobaiti](https://github.com/Nawaf-Althobaiti) <br>
