@@ -16,10 +16,10 @@ Team Members <br>
  
 
 # Introduction
-## Background
+### Background
 The Kingdom of Saudi Arabia aspires to increase its share of renewable energy production to stabilize its sustainable economy and diversify its energy sources. Hence, it has initiated the National Renewable Energy Program (NREP) as a part of its 2030 vision. Additionally, it has formed the Circular Carbon Economy Program (CCEP) for managing emissions to support its commitment to reaching a Net-Zero greenhouse gas emission by 2060.
 
-## Problem Statement
+### Problem Statement
 Since Saudi weather is solar abundant, solar energy is considered the most feasible choice for renewable energy. Therefore, this project aims to predict the Global Horizontal Irradiance (GHI) by utilizing solar irradiance data to investigate Saudi Arabia’s solar energy projects' potential.
 
 # Dataset Review
@@ -49,7 +49,7 @@ The table below lists the dataset features:
 |     16    |     Relative humidity, %    |
 |     17    |     SERI_QC flag on relative   humidity    |
 
-## Flags
+### Flags
 The dataset included several SERI_QC flag features, which are used to describe the conditions of the data observations. The table below lists the flags and their description:
 |     Flag    |     Description     |
 |---|---|
@@ -72,7 +72,7 @@ As mentioned above, the dataset is integrated from several files, each specified
 | 4 | Location |
 | 5 | Region |
 
-## Imputation
+### Imputation
 We’ve identified the outliers as the points greater or less than 1.5 multiplied by the interquartile range added to the 75th or subtracted from the 25th quartiles. Additionally, several observations in the dataset are classified as untrusted or haven’t passed all the required criteria have been turned into nulls. The table below explains the imputation methodologies:
 | Variable | Imputation | Imputation Method |
 |---|---|---|
