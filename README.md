@@ -87,22 +87,22 @@ The plots below indicate that at a first glance, the dataset appears to be clean
 Lastly, the year, month, day, hour, and minute columns are transformed into a timeseries column that is set to the index.
 
 # Exploratory Data Analysis
-![GHI and Air Temperature over a month](https://i.imgur.com/5g3TqCf.png)
+![GHI and Air Temperature over a month](https://i.imgur.com/5g3TqCf.png)\
 Plot (1) - The air temperature and GHI are weakly correlated. As seen in the plot, at approximately 35.5 °C, the GHI value starts to degrade, which could be due to the impact of the high heat on the material of the solar panels or the humidity.\
 <br>
-![GHI and Relative Humidity over a month](https://i.imgur.com/gNBZHb8.jpg)
+![GHI and Relative Humidity over a month](https://i.imgur.com/gNBZHb8.jpg)\
 Plot (2) - The humidity and GHI are weakly negatively correlated. As seen in the plot, in June (month six) the humidity reaches its lowest value of 25%, while the GHI reaches its highest point. Also, moving to July and August, the GHI rapidly drops. Hence, we can conclude that the humidity impacts the GHI.\
 <br>
-![GHI For Each City](https://i.imgur.com/ZOineDv.png)
+![GHI For Each City](https://i.imgur.com/ZOineDv.png)\
 Plot (3) – the median doesn’t differ significantly from one city to another. However, we can conclude that Wadi Aldwasser and Sharurah have the best GHI values, and the Southern region has better GHI values, while the eastern region has the lowest GHI values.\
 <br>
-![Average GHI Per Location (Monthly)](https://i.imgur.com/ZgbenBA.png)
+![Average GHI Per Location (Monthly)](https://i.imgur.com/ZgbenBA.png)\
 Plot (4) – the heat map shows that, on average, May and June are the most suitable for solar energy. Additionally, we can conclude that Sharurah and Wadi Aldwasser are the most consistent locations.\
 <br>
-![GHI per Month (Sharurah)](https://i.imgur.com/KMoZ4wS.png)
+![GHI per Month (Sharurah)](https://i.imgur.com/KMoZ4wS.png)\
 Plot (5) – this plot takes a closer look at one of the best locations for solar energy projects in the kingdom. The plot confirms that May is the best time for solar energy projects.\
 <br>
-![Hourly GHI For Sharurah in May](https://i.imgur.com/Fa2LKIo.png)
+![Hourly GHI For Sharurah in May](https://i.imgur.com/Fa2LKIo.png)\
 Plot (6) – At an hourly rate, on average, the GHI reaches its peak at 12 PM in Sharurah during May.\
 <br>
 
