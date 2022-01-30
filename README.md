@@ -84,9 +84,87 @@ The plots below indicate that at a first glance, the dataset appears to be clean
 ![outlier plot](https://i.imgur.com/9hLNlht.png) ![After removing outlier](https://i.imgur.com/Uj11aFZ.png)
 
 ## Transformation
+Lastly, the year, month, day, hour, and minute columns are transformed into a timeseries column that is set to the index.
+
 # Exploratory Data Analysis
+![GHI and Air Temperature over a month](https://i.imgur.com/5g3TqCf.png)
+Plot (1) - The air temperature and GHI are weakly correlated. As seen in the plot, at approximately 35.5 °C, the GHI value starts to degrade, which could be due to the impact of the high heat on the material of the solar panels or the humidity.\
+<br>
+![GHI and Relative Humidity over a month](https://i.imgur.com/gNBZHb8.jpg)
+Plot (2) - The humidity and GHI are weakly negatively correlated. As seen in the plot, in June (month six) the humidity reaches its lowest value of 25%, while the GHI reaches its highest point. Also, moving to July and August, the GHI rapidly drops. Hence, we can conclude that the humidity impacts the GHI.\
+<br>
+![GHI For Each City](https://i.imgur.com/ZOineDv.png)
+Plot (3) – the median doesn’t differ significantly from one city to another. However, we can conclude that Wadi Aldwasser and Sharurah have the best GHI values, and the Southern region has better GHI values, while the eastern region has the lowest GHI values.\
+<br>
+![Average GHI Per Location (Monthly)](https://i.imgur.com/ZgbenBA.png)
+Plot (4) – the heat map shows that, on average, May and June are the most suitable for solar energy. Additionally, we can conclude that Sharurah and Wadi Aldwasser are the most consistent locations.\
+<br>
+![GHI per Month (Sharurah)](https://i.imgur.com/KMoZ4wS.png)
+Plot (5) – this plot takes a closer look at one of the best locations for solar energy projects in the kingdom. The plot confirms that May is the best time for solar energy projects.\
+<br>
+![Hourly GHI For Sharurah in May](https://i.imgur.com/Fa2LKIo.png)
+Plot (6) – At an hourly rate, on average, the GHI reaches its peak at 12 PM in Sharurah during May.\
+<br>
+
 # Building Regression Models
-## Regression Problem
+### Regression Problem
+We achieved the best results by implementing an XGBoost regression model and hyperparameter tuning using a grid search.
+```
+params = { 'max_depth': [3,6,10],
+           'learning_rate': [0.01, 0.05, 0.1],
+           'n_estimators': [10, 100]
+         }
+
+xgbr = XGBRegressor(seed = 42)
+
+clf = GridSearchCV(
+    estimator=xgbr, 
+    param_grid=params,
+    scoring='neg_mean_squared_error', 
+    cv = 5,
+    verbose=1
+)
+
+xgbr_model = XGBRegressor(
+    objective = 'reg:squarederror',
+    n_estimators=100,
+    max_depth = 3,
+    learning_rate=0.05,
+    random_state=42
+)
+```
+We then see that the best parameters to the get the best mean test score is:
+| param_max_depth | param_learning_rate | param_n_estimators | mean_test_score | rank_test_score |
+|---|---|---|---|---|
+| 3 | 0.05 | 100 | -20215.36 | 1 |
+<br>
+The results were:
+| R^2 | 0.83 |
+|---|---|
+| MSE | 19886.39 |
+| MAE | 88.03 |
+<br>
+
+### Timeseries Problem Using ARIMA Model
+We can train the ARIMA model since we are working with a time series problem. Forecasting would be dependant on the time of the day.\
+![Autocorrelation](https://i.imgur.com/X2JIwtV.png)
+As expected, we can see the relationship varies from the autocorrelation. Negative correlation in night and positive in day hours.\
+<br>
+![Partial Correlation](https://i.imgur.com/efPxve2.png)
+Looking at the partial correlation, there are not complete trend going on. Hence, we don't need any differencing.\
+<br>
+We trained the ARIMA model with these parameters.
+```
+model = ARIMA(train, order = (2, 0, 6))
+result = model.fit(disp = 0)
+print(result.summary())
+```
+#### Summary Results
+![ARIMA Model Results](https://i.imgur.com/I7PDUiu.png)
+The ma.L4.ghi_derived coefficient is close to zero. Hence, it could be removed to enhance the performance of the model.
+
+#### Performance
+![GHI Forecast](https://i.imgur.com/gORaAah.png)
 ## Timeseries Problem Using ARIMA Model
 ### Summary Results
 ### Performance
