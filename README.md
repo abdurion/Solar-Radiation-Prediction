@@ -81,7 +81,7 @@ We’ve identified the outliers as the points greater or less than 1.5 multiplie
 | GHI, DNI, DHI | - Values > 1000 = 1000 (Correct max) - Values < 0 = 0 (Correct min) | Selective Replacement |\
 
 The plots below indicate that at a first glance, the dataset appears to be clean. However, it holds several wrong values.
-![outlier plot](https://i.imgur.com/9hLNlht.png)
+![outlier plot](https://i.imgur.com/9hLNlht.png) ![After removing outlier](https://i.imgur.com/Uj11aFZ.png)
 
 ## Transformation
 # Exploratory Data Analysis
