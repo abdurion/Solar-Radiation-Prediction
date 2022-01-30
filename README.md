@@ -107,9 +107,9 @@ Plot (6) – At an hourly rate, on average, the GHI reaches its peak at 12 PM in
 <br>
 
 # Building Regression Models
-### Regression Problem
+## Regression Problem
 We achieved the best results by implementing an XGBoost regression model and hyperparameter tuning using a grid search.
-```
+```python:
 params = { 'max_depth': [3,6,10],
            'learning_rate': [0.01, 0.05, 0.1],
            'n_estimators': [10, 100]
@@ -138,14 +138,15 @@ We then see that the best parameters to the get the best mean test score is:
 |---|---|---|---|---|
 | 3 | 0.05 | 100 | -20215.36 | 1 |
 <br>
-The results were:
+The results were:\
+
 | R^2 | 0.83 |
 |---|---|
 | MSE | 19886.39 |
 | MAE | 88.03 |
 <br>
 
-### Timeseries Problem Using ARIMA Model
+## Timeseries Problem Using ARIMA Model
 We can train the ARIMA model since we are working with a time series problem. Forecasting would be dependant on the time of the day.\
 ![Autocorrelation](https://i.imgur.com/X2JIwtV.png)
 As expected, we can see the relationship varies from the autocorrelation. Negative correlation in night and positive in day hours.\
@@ -154,17 +155,14 @@ As expected, we can see the relationship varies from the autocorrelation. Negati
 Looking at the partial correlation, there are not complete trend going on. Hence, we don't need any differencing.\
 <br>
 We trained the ARIMA model with these parameters.
-```
+```python:
 model = ARIMA(train, order = (2, 0, 6))
 result = model.fit(disp = 0)
 print(result.summary())
 ```
-#### Summary Results
+### Summary Results
 ![ARIMA Model Results](https://i.imgur.com/I7PDUiu.png)
 The ma.L4.ghi_derived coefficient is close to zero. Hence, it could be removed to enhance the performance of the model.
 
-#### Performance
-![GHI Forecast](https://i.imgur.com/gORaAah.png)
-## Timeseries Problem Using ARIMA Model
-### Summary Results
 ### Performance
+![GHI Forecast](https://i.imgur.com/gORaAah.png)
