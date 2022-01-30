@@ -148,10 +148,10 @@ The results were:\
 
 ## Timeseries Problem Using ARIMA Model
 We can train the ARIMA model since we are working with a time series problem. Forecasting would be dependant on the time of the day.\
-![Autocorrelation](https://i.imgur.com/X2JIwtV.png)
+![Autocorrelation](https://i.imgur.com/X2JIwtV.png)\
 As expected, we can see the relationship varies from the autocorrelation. Negative correlation in night and positive in day hours.\
 <br>
-![Partial Correlation](https://i.imgur.com/efPxve2.png)
+![Partial Correlation](https://i.imgur.com/efPxve2.png)\
 Looking at the partial correlation, there are not complete trend going on. Hence, we don't need any differencing.\
 <br>
 We trained the ARIMA model with these parameters.
