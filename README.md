@@ -78,7 +78,7 @@ We’ve identified the outliers as the points greater or less than 1.5 multiplie
 |---|---|---|
 | Humidity | Filled in based on the location | Mean |
 | Temperature | Filled sequentially | Forward Fill |
-| GHI, DNI, DHI | - Values > 1000 = 1000 (Correct max) - Values < 0 = 0 (Correct min) | Selective Replacement |
+| GHI, DNI, DHI | - Values > 1000 = 1000 (Correct max) - Values < 0 = 0 (Correct min) | Selective Replacement |\
 The plots below indicate that at a first glance, the dataset appears to be clean. However, it holds several wrong values.
 ![outlier plot](https://i.imgur.com/9hLNlht.png)
 
