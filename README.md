@@ -1,5 +1,9 @@
 ## Solar-Radiation-Prediction
 This project explores solar irradiance data collected from the NASA earth observing system project to evaluate long-term climate trends to predict the Global Horizontal Irradiance (GHI) and ensure the fulfillment of the required energy production.
+
+## Data
+The King Abdulaziz City for Science and Technology and NREL operated a solar radiation monitoring network across Saudi Arabia from 1998 to 2003.<br>
+[NASA Remote Sensing Validation Data: Saudi Arabia](https://www.nrel.gov/grid/solar-resource/saudi-arabia.html)
 <br>
 <br>
 [Raw Dataset](https://drive.google.com/file/d/1-I9EuifioMKqO2e1PSMOPKPKxqg8LZGR/view?usp=sharing) <br>
