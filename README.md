@@ -6,7 +6,7 @@ The King Abdulaziz City for Science and Technology and NREL operated a solar rad
 [NASA Remote Sensing Validation Data: Saudi Arabia](https://www.nrel.gov/grid/solar-resource/saudi-arabia.html)
 <br>
 <br>
-[Raw Dataset [2000 ~ 2002] Combined](https://drive.google.com/file/d/1-I9EuifioMKqO2e1PSMOPKPKxqg8LZGR/view?usp=sharing) <br>
+[Raw Dataset [2000 ~ 2002] For Jupyter](https://drive.google.com/file/d/1-I9EuifioMKqO2e1PSMOPKPKxqg8LZGR/view?usp=sharing) <br>
 ['Dashboard-Ready' Dataset](https://drive.google.com/file/d/11gnCoO1SOZAadrHr01RIIwkrcHgvZWSv/view?usp=sharing)
 <br>
 <br><br>
